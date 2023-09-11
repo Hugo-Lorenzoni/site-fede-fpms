@@ -1,32 +1,13 @@
 ---
 import BlasonPolytech from "./BlasonPolytech.astro";
-
-import {
-  NavigationMenu,
-  NavigationMenuContent,
-  NavigationMenuIndicator,
-  NavigationMenuItem,
-  NavigationMenuLink,
-  NavigationMenuList,
-  NavigationMenuTrigger,
-  NavigationMenuViewport,
-} from "@/components/ui/navigation-menu"
-
-
+import NavMenu from "./NavMenu";
 ---
-
 <header class=" sticky top-0 bg-white bg-opacity-50 backdrop-blur-sm text-lg font-bold">
     <nav class="container mx-auto py-4 flex justify-between items-center">
       <a href="/" class="flex items-center gap-2">
         <BlasonPolytech/>
         <div>Fédération des Etudiants FPMs</div>
       </a>
-      <ul class="flex gap-6">
-        <li><a href="/cercles">Cercles</a></li>
-        <li><a href="/houzeau">La Cité Houzeau</a></li>
-        <li><a href="/folklore">Folklore</a></li>
-        <li><a href="/etudes-en-polytech">Étudier en Polytech</a></li>
-        <li><a href="/contact">Contact</a></li>
-      </ul>
+      <NavMenu client:load/>
     </nav>
-  </header>
+</header>
